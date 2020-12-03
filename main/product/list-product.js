@@ -52,35 +52,43 @@
 
 
 class Product {
-    constructor(id,name, origin, describe, price, number) {
+    constructor(id, name, image, quantity, price, origin, describe) {
         this.id = id;
         this.name = name;
+        this.image = image;
+        this.quantity = quantity;
+        this.price = price;
         this.origin = origin;
         this.describe = describe;
-        this.price = price;
-        this.number = number;
+
     }
 }
 
 let productList = [];
 
 function displayProducts() {
-    let content="";
+    let table = "";
     for (let i = 0; i < productList.length; i++) {
-        content += `<tr>
+        table += `<tr>
                     <td>${productList[i].id}</td>
                     <td>${productList[i].name}</td>
-                    <td>${productList[i].origin}</td>
-                    <td>${productList[i].describe}</td>
+                    <td>${productList[i].image}</td>
+                    <td>${productList[i].quantity}</td>
                     <td>${productList[i].price}</td>
-                    <td>${productList[i].number}</td></tr>`
+                    <td>${productList[i].origin}</td>
+                    <td>${productList[i].describe}</td>                
+                    <td><button class='btn btn-info' onclick='editProduct()'>Edit</i></button>"</td>
+                    <td><button style='margin-left: 15px;' class='btn btn-danger' onclick='deleteProduct()'>Delete</i></button></td>
+                    </tr>`
+
     }
-    document.getElementById('display-product').innerHTML = content;
+    document.getElementById('display-product').innerHTML = table;
 }
 
 function addNewProduct() {
+
     let newProduct = new Product(
-        productList.length+1,
+        productList.length + 1,
         document.getElementById('name-product').value,
         document.getElementById('origin-product').value,
         document.getElementById('describe-product').value,

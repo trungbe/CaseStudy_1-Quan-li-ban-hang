@@ -12,16 +12,16 @@
     <title>Thêm sản phẩm</title>
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 
 </head>
@@ -35,9 +35,9 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.html">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                <i class="fab fa-phoenix-framework"></i>
             </div>
             <div class="sidebar-brand-text mx-3">QUẢN LÍ BÁN HÀNG</div>
         </a>
@@ -53,7 +53,7 @@
         <hr class="sidebar-divider my-0">
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="../index.html">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -78,8 +78,8 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
 
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <a class="collapse-item" href="../login/register.html">Register</a>
+                    <a class="collapse-item" href="../login/forgot-password.html">Forgot Password</a>
                     <div class="collapse-divider"></div>
 
                 </div>
@@ -89,13 +89,13 @@
 
         <!-- Nav Item - Tables Product -->
         <li class="nav-item">
-            <a class="nav-link" href="ListProduct.html">
+            <a class="nav-link" href="list-product.html">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Product Management</span></a>
         </li>
         <!-- Nav Item - Tables Customer -->
         <li class="nav-item">
-            <a class="nav-link" href="ListCustomer.html">
+            <a class="nav-link" href="list-customer.html">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Customer Management</span></a>
         </li>
@@ -130,7 +130,7 @@
                 <!-- Topbar Search -->
                 <form>
                     <div class="input-group-append">
-                        <a class="btn btn-primary" href="ListProduct.html" type="button">
+                        <a class="btn btn-primary" href="list-product.html" type="button">
                             <i class="fas fa-undo"></i>
                         </a>
                     </div>
@@ -234,7 +234,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img alt="" class="rounded-circle"
-                                         src="img/undraw_profile_1.svg">
+                                         src="../../img/undraw_profile_1.svg">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
                                 <div class="font-weight-bold">
@@ -247,7 +247,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img alt="" class="rounded-circle"
-                                         src="img/undraw_profile_2.svg">
+                                         src="../../img/undraw_profile_2.svg">
                                     <div class="status-indicator"></div>
                                 </div>
                                 <div>
@@ -260,7 +260,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img alt="" class="rounded-circle"
-                                         src="img/undraw_profile_3.svg">
+                                         src="../../img/undraw_profile_3.svg">
                                     <div class="status-indicator bg-warning"></div>
                                 </div>
                                 <div>
@@ -296,7 +296,7 @@
                            href="#" id="userDropdown" role="button">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                             <img class="img-profile rounded-circle"
-                                 src="img/undraw_profile.svg">
+                                 src="../../img/undraw_profile.svg">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div aria-labelledby="userDropdown"
@@ -336,18 +336,32 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table cellspacing="0" class="table table-bordered" id="dataTable" width="100%">
-
-                                <!--                                <div class="col-sm-6 mb-3 mb-sm-0">-->
-                                <!--                                    <input class="form-control form-control-user" id="newId" placeholder="Seri"-->
-                                <!--                                           type="number">-->
-                                <!--                                </div>-->
                                 <br>
-                                <div class="col-sm-6">
-                                    <input class="form-control form-control-user" id="name-product" placeholder="Name"
-                                           type="text">
+                                <div class="col-lg-6">
+                                    <input class="form-control form-control-user" id="name-product"
+                                           placeholder="Name" type="text" required>
+                                    <div style="color: red; font-size: small;" id="name-invalid"></div>
                                 </div>
                                 <br>
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
+                                    <input class="form-control form-control-user" id="image-product"
+                                           placeholder="Image" type="text" required>
+                                    <div style="color: red; font-size: small;" id="image-invalid"></div>
+                                </div>
+                                <br>
+                                <div class="col-lg-6">
+                                    <input class="form-control form-control-user" id="quantity-product"
+                                           placeholder="Quantity" type="number" required>
+                                    <div style="color: red; font-size: small;" id="quantity-invalid"></div>
+                                </div>
+                                <br>
+                                <div class="col-lg-6">
+                                    <input class="form-control form-control-user" id="price-product"
+                                           placeholder="Price" type="number" required>
+                                    <div style="color: red; font-size: small;" id="price-invalid"></div>
+                                </div>
+                                <br>
+                                <div class="col-lg-6">
 
                                     <select class="form-control form-control-user" id="origin-product"
                                             placeholder="Origin">
@@ -357,28 +371,18 @@
                                         <option>USA</option>
                                         <option>England</option>
                                     </select>
-
+                                    <div style="color: red; font-size: small;" id="origin-invalid"></div>
                                 </div>
                                 <br>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control form-control-user" id="describe-product"
-                                              placeholder="Describe"
-                                    ></textarea>
+                                <div class="col-lg-6">
+                                        <textarea class="form-control form-control-user" id="describe-product"
+                                                  placeholder="Describe" rows="3" required></textarea>
+                                    <div style="color: red; font-size: small;" id="describe-invalid"></div>
                                 </div>
                                 <br>
-                                <div class="col-sm-6">
-                                    <input class="form-control form-control-user" id="price-product" placeholder="Price"
-                                           type="number">
-                                </div>
-                                <br>
-                                <div class="col-sm-6">
-                                    <input class="form-control form-control-user" id="number-product"
-                                           placeholder="Number"
-                                           type="text">
-                                </div>
-                                <br>
-                                <div class="input-group-append">
-                                    <a class="btn btn-primary" href="ListProduct.html" onclick="addNewProduct()" type="button" target="_blank">
+                                <div class="col-lg-6">
+                                    <a href="list-product.html" class="btn btn-primary" style="float: left;" onclick="addNewProduct()"
+                                            type="submit" target="_blank">
                                         <i class="far fa-save"></i>
                                     </a>
                                 </div>
@@ -386,8 +390,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
         </div>
@@ -397,7 +399,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website Of Trung Be</span>
+                    <span>Copyright &copy; Website Of Trung Be</span>
                 </div>
             </div>
         </footer>
@@ -428,30 +430,30 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <a class="btn btn-primary" href="../login/login.html">Logout</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../vendor/jquery/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+<script src="../../js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../../vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="js/demo/datatables-demo.js"></script>
+<script src="../../js/demo/datatables-demo.js"></script>
 <!-- scripts -->
-<script src="ListProduct.js"></script>
+<script src="add-product.js"></script>
 
 </body>
 
