@@ -45,7 +45,7 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
         <li class="nav-item active">
-            <a class="nav-link" href="home.html">
+            <a class="nav-link" href="../home.html">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Home</span></a>
         </li>
@@ -252,7 +252,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Product Detail</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
                         <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -314,18 +314,17 @@
             </div>
         </div>
         <!-- Delete Modal -->
-        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
-            <div class="modal-dialog">
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" role="dialog"
+             tabindex="-1">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
                         <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body" id="delete-modal">
-
-                    </div>
+                    <div class="modal-body">Select icon "Delete" below if you are ready to delete your current product.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-dismiss="modal" type="button"><i class="fas fa-window-close"></i></button>
                         <button class="btn btn-primary"  onclick="deleteProduct()" type="button"><i class="fas fa-trash-alt"></i></button>
@@ -365,7 +364,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-                <a class="btn btn-primary" href="../login.html">Logout</a>
+                <a class="btn btn-primary" href="../login/login.html" >Logout</a>
             </div>
         </div>
     </div>
@@ -391,6 +390,7 @@
 <script src="product-Class.js"></script>
 <script src="validate-form.js"></script>
 <script src="list-edit-del-product.js"></script>
+<script src="../login/login.js"></script>
 
 
 </body>

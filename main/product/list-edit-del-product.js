@@ -19,7 +19,8 @@
 //     document.getElementById('display-product').innerHTML = table;
 // }
 
-let products = getProducts("products")
+let products = []
+products = getProducts("products")
 let product;
 let table = "";
 let idForDelete;
@@ -44,9 +45,9 @@ for (let i = 0; i < products.length; i++) {
 document.getElementById('display-product').innerHTML = table;
 
 
-// tra ve list sp // localStorage.getItem(key) : tra ve 1 string // JSON.parse() : chuyen thanh mang
+// tra ve list sp // JSON.parse() : chuyen thanh doi tuong mang
 function getProducts(key) {
-    return (localStorage.getItem(key) == null ? [] : JSON.parse(localStorage.getItem(key)))
+    return JSON.parse(localStorage.getItem(key))
 }
 
 // luu value theo key
@@ -55,17 +56,6 @@ function setProducts(key, value) {
 }
 
 // -------------------------------- sua san pham -------------------------------//
-
-// hien thi ds cu
-function fillForm() {
-    document.getElementById("id-product").value = product.id
-    document.getElementById("name-product").value = product.name
-    document.getElementById("image-product").value = product.image
-    document.getElementById("quantity-product").value = product.quantity
-    document.getElementById("price-product").value = product.price
-    document.getElementById("origin-product").value = product.origin
-    document.getElementById("describe-product").value = product.description
-}
 //hien thi form edit
 function openEditForm(id) {
     products.forEach(function (p) {
@@ -78,6 +68,17 @@ function openEditForm(id) {
     resetWarning()
     fillForm()
 }
+// hien thi ds cu len form
+function fillForm() {
+    document.getElementById("id-product").value = product.id
+    document.getElementById("name-product").value = product.name
+    document.getElementById("image-product").value = product.image
+    document.getElementById("quantity-product").value = product.quantity
+    document.getElementById("price-product").value = product.price
+    document.getElementById("origin-product").value = product.origin
+    document.getElementById("describe-product").value = product.description
+}
+
 //ham sua sp
 function editProduct() {
     product = new Product(
@@ -111,7 +112,6 @@ function editProduct() {
 }
 
 
-
 // -------------------------------- xoa san pham -------------------------------//
 //hien thi modal xoa
 function openDeleteModal(id) {
@@ -119,6 +119,7 @@ function openDeleteModal(id) {
     //xoa theo id
     idForDelete = id
 }
+
 //ham xoa sp
 function deleteProduct() {
     let indexForDelete
@@ -132,7 +133,7 @@ function deleteProduct() {
     //tiến hành lưu vào local
     setProducts("products", JSON.stringify(products))
     products = getProducts("products")
-    alert("Xóa thành công!")
+    // alert("Xóa thành công!")
     //tra ve trang list
     location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/product/list-product.html")
 }
