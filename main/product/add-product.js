@@ -1,6 +1,6 @@
+let product;
 let products = []
 products = getProducts("products")
-let product;
 let largest = 0;
 
 function addNewProduct() {
@@ -37,9 +37,9 @@ function getLargest() {
 }
 
 
-// tra ve list sp // JSON.parse() : chuyen thanh doi tuong mang
+// tra ve list sp // localStorage.getItem(key) : tra ve 1 string // JSON.parse() : chuyen thanh mang
 function getProducts(key) {
-    return JSON.parse(localStorage.getItem(key))
+    return (localStorage.getItem(key) == null ? [] : JSON.parse(localStorage.getItem(key)))
 }
 
 // luu value theo key

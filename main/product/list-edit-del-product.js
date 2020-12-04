@@ -45,9 +45,9 @@ for (let i = 0; i < products.length; i++) {
 document.getElementById('display-product').innerHTML = table;
 
 
-// tra ve list sp // JSON.parse() : chuyen thanh doi tuong mang
+// tra ve list sp // localStorage.getItem(key) : tra ve 1 string // JSON.parse() : chuyen thanh mang
 function getProducts(key) {
-    return JSON.parse(localStorage.getItem(key))
+    return (localStorage.getItem(key) == null ? [] : JSON.parse(localStorage.getItem(key)))
 }
 
 // luu value theo key
@@ -68,6 +68,7 @@ function openEditForm(id) {
     resetWarning()
     fillForm()
 }
+
 // hien thi ds cu len form
 function fillForm() {
     document.getElementById("id-product").value = product.id
