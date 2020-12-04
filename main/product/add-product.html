@@ -339,26 +339,26 @@
                                 <br>
                                 <div class="col-lg-6">
                                     <input class="form-control form-control-user" id="name-product"
-                                           placeholder="Name" type="text" required>
-                                    <div style="color: red; font-size: small;" id="name-invalid"></div>
+                                           placeholder="Name" required type="text">
+                                    <div id="name-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
                                     <input class="form-control form-control-user" id="image-product"
-                                           placeholder="Image" type="text" required>
-                                    <div style="color: red; font-size: small;" id="image-invalid"></div>
+                                           placeholder="Image" required type="text">
+                                    <div id="image-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
                                     <input class="form-control form-control-user" id="quantity-product"
-                                           placeholder="Quantity" type="number" required>
-                                    <div style="color: red; font-size: small;" id="quantity-invalid"></div>
+                                           placeholder="Quantity" required type="number">
+                                    <div id="quantity-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
                                     <input class="form-control form-control-user" id="price-product"
-                                           placeholder="Price" type="number" required>
-                                    <div style="color: red; font-size: small;" id="price-invalid"></div>
+                                           placeholder="Price" required type="number">
+                                    <div id="price-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
@@ -371,20 +371,20 @@
                                         <option>USA</option>
                                         <option>England</option>
                                     </select>
-                                    <div style="color: red; font-size: small;" id="origin-invalid"></div>
+                                    <div id="origin-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
                                         <textarea class="form-control form-control-user" id="describe-product"
-                                                  placeholder="Describe" rows="3" required></textarea>
-                                    <div style="color: red; font-size: small;" id="describe-invalid"></div>
+                                                  placeholder="Describe" required rows="3"></textarea>
+                                    <div id="describe-invalid" style="color: red; font-size: small;"></div>
                                 </div>
                                 <br>
                                 <div class="col-lg-6">
-                                    <a href="list-product.html" class="btn btn-primary" style="float: left;" onclick="addNewProduct()"
-                                            type="submit" target="_blank">
+                                    <button class="btn btn-primary" onclick="addNewProduct()" style="float: left;"
+                                       target="_blank" >
                                         <i class="far fa-save"></i>
-                                    </a>
+                                    </button>
                                 </div>
                             </table>
                         </div>
@@ -454,6 +454,8 @@
 <script src="../../js/demo/datatables-demo.js"></script>
 <!-- scripts -->
 <script src="add-product.js"></script>
+<script src="product-Class.js"></script>
+<script src="validate-form.js"></script>
 
 </body>
 
