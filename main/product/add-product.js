@@ -23,7 +23,7 @@ function addNewProduct() {
         products = getProducts("products")
         alert("Thêm thành công!")
         //tra ve trang list
-        location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/product/list-product.html")
+        location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/product/list-edit-del-product.html")
 
     }
 }

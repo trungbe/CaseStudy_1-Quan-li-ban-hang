@@ -26,6 +26,7 @@ function checkForm() {
         document.getElementById("describe-invalid").innerHTML = "Description is required!"
         isValid = false;
     }
+
     return isValid;
 }
 //ham xoa cac canh bao validate

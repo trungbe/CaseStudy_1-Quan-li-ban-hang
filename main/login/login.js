@@ -7,7 +7,7 @@ function login() {
 
     } else if (username == "user" && password == "123456") {
         alert("Bạn Đã Đăng Nhập Với Tư Cách User");
-        location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/home.html")
+        location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/home/home.html")
     }
 }
 
