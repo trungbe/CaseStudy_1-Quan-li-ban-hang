@@ -28,8 +28,7 @@ let idForDelete;
 for (let i = 0; i < products.length; i++) {
     table += `<tr>
                 <td>${products[i].id}</td>
-                <td>${products[i].name}</td>
-                
+                <td>${products[i].name}</td>               
                 <td><img src="${products[i].image}" style="width: 100px;height: 100px;object-fit: contain;"></td>
                 <td>${products[i].quantity}</td>
                 <td>${products[i].price}</td>
@@ -46,7 +45,7 @@ for (let i = 0; i < products.length; i++) {
 document.getElementById('display-product').innerHTML = table;
 
 
-// <td>${products[i].image}</td> tra ve list sp // localStorage.getItem(key) : tra ve 1 string // JSON.parse() : chuyen thanh mang
+// tra ve list sp // localStorage.getItem(key) : tra ve 1 string // JSON.parse() : chuyen thanh mang
 function getProducts(key) {
     return (localStorage.getItem(key) == null ? [] : JSON.parse(localStorage.getItem(key)))
 }
