@@ -29,7 +29,7 @@ for (let i = 0; i < products.length; i++) {
     table += `<tr>
                 <td>${products[i].id}</td>
                 <td>${products[i].name}</td>               
-                <td><img src="${products[i].image}" style="width: 100px;height: 100px;object-fit: contain;"></td>
+                <td><img alt="..." src="${products[i].image}" style="width: 100px;height: 100px;object-fit: contain;"></td>
                 <td>${products[i].quantity}</td>
                 <td>${products[i].price}</td>
                 <td>${products[i].origin}</td>
@@ -116,7 +116,7 @@ function editProduct() {
 // -------------------------------- xoa san pham -------------------------------//
 //hien thi modal xoa
 function openDeleteModal(id) {
-    document.getElementById("delete-modal").innerText = 'Bạn có muốn xóa sản phẩm không?'
+    // document.getElementById("delete-modal").innerText = 'Bạn có muốn xóa sản phẩm không?'
     //xoa theo id
     idForDelete = id
 }
@@ -134,7 +134,7 @@ function deleteProduct() {
     //tiến hành lưu vào local
     setProducts("products", JSON.stringify(products))
     products = getProducts("products")
-     alert("Xóa thành công!")
+    alert("Xóa thành công!")
     //tra ve trang list
     location.replace("http://localhost:63342/startbootstrap-sb-admin-2-gh-pages/main/product/list-edit-del-product.html")
 }
