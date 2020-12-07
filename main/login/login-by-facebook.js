@@ -4,7 +4,7 @@ window.fbAsyncInit = function () {
         appId: '1119524491830398',
         cookie: true,
         xfbml: true,
-        version: 'v8.0', // của mình là ver 8.0
+        version: 'v8.0',
     });
     FB.AppEvents.logPageView();
 };
