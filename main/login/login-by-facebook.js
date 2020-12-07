@@ -23,7 +23,7 @@ window.fbAsyncInit = function () {
 function loginFb(){
     FB.login((response) => {
         //do something
-    }, {scope: 'exampleInputEmail'});}
+    }, {scope: 'email'});}
 
 // logs the user in the application and facebook
 // function loginFb(){
