@@ -35,9 +35,9 @@ for (let i = 0; i < products.length; i++) {
                 <td>${products[i].origin}</td>
                 <td>${products[i].description}</td>
                 <td>
-                <button class='btn btn-info' data-toggle="modal" data-target="#exampleModal" 
+                <button  class='btn btn-info' data-toggle="modal" data-target="#exampleModal" 
                 onclick='openEditForm(${products[i].id})'>Edit</i></button>
-                <button style='margin-left: 15px;' class='btn btn-danger' data-toggle="modal" data-target="#exampleModal1" 
+                <button  class='btn btn-danger' data-toggle="modal" data-target="#exampleModal1" 
                 onclick='openDeleteModal(${products[i].id})'>Delete</i></button>
                 </td>                
                 </tr>`
